@@ -75,7 +75,7 @@ a {
 }
 #joinnow-button:hover {
     background-color: var(--joinNowButtonHover);
-    border: 2px solid var(--joinNowButtonHover);
+    border: 1px solid var(--joinNowButtonHover);
 }
 
 .slide {
