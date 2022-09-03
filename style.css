@@ -157,6 +157,7 @@ a {
 .slide-content > button {
     border-style: none;
     border: 1px solid black;
+    color: black;
     border-radius: 10000px;
     padding: 8px 12px;
     font-size: 1.2rem;
@@ -263,11 +264,6 @@ a {
         flex-direction: column;
         width: 80%;
         margin: auto;
-    }
-}
-@media only screen and (max-width: 500px) {
-    .sidepanel {
-        width: 50vw;
     }
 }
 
