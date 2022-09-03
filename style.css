@@ -48,7 +48,7 @@ a {
     height: 100vh;
     top: 0;
     right: 0;
-    overflow-x: auto;
+    overflow-x: hidden;
     transition: 0.2s;
     padding-top: 60px;
     white-space: nowrap;
