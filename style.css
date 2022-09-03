@@ -10,14 +10,16 @@ body {
 }
 
 :root {
-    --navbarBgColor: #fdede9;
     --navbarSignInButtonHover: #ffdbd2;
+    --navbarShadowBgColor: rgb(216, 216, 216);
     --joinNowButtonHover: rgb(82, 82, 82);
     --slideOneBgColor: #daede7;
     --slideOneButtonHover: #c6dcd5;
     --slideOneColor: #1d281c;
     --otherSlidesBgColor: rgb(0, 98, 64);
     --otherSlidesButtonHover: rgb(2, 130, 85);
+    --sidepanelLinksColor: rgb(46, 46, 46);
+    --sidepanelLinksHoverColor: rgb(124, 124, 124);
 }
 
 #header {
@@ -25,8 +27,9 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 10px 20px;
-    background-color: var(--navbarBgColor);
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0px 2px 2px var(--navbarShadowBgColor);
 }
 li {
     list-style-type: none;
@@ -45,28 +48,51 @@ a {
     height: 100vh;
     top: 0;
     right: 0;
-    background-color: black;
-    overflow-x: hidden;
+    overflow-x: auto;
+    transition: 0.2s;
     padding-top: 60px;
+    white-space: nowrap;
+    background-color: white;
 }
 .sidepanel a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    color: white;
-    text-align: right;
-    padding: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
     text-transform: uppercase;
+    color: var(--sidepanelLinksColor);
     display: block;
+    transition: 0.3s;
+    cursor: pointer;
 }
-.sidepanel .closeButton {
+.sidepanel a:hover {
+    color: var(--sidepanelLinksHoverColor);
+}
+.sidepanel > .closeButton {
     position: absolute;
-    top: 0;
-    left: 25px;
-    font-size: 30px;
+    top: 20px;
+    right: 40px;
+    font-size: 1rem;
+}
+.sidepanel-buttons {
+    text-align: center;
+    white-space: nowrap;
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 8px 8px 32px;
 }
 .openButton {
     font-size: 20px;
     cursor: pointer;
+    border: none;
+    top: 2vh;
+    right: 2vw;
+    background-color: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 #signin-button, #joinnow-button {
     border-style: none;
@@ -237,6 +263,11 @@ a {
         flex-direction: column;
         width: 80%;
         margin: auto;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .sidepanel {
+        width: 50vw;
     }
 }
 
