@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="script.js"></script>
     <title>Starbucks homepage</title>
 </head>
@@ -12,16 +13,18 @@
     <div id="container">
         <div id="header">
             <img id="logo" src="images/starbucks-logo.svg.png" alt="">
-            <button class="openButton" onclick="openPanel()">open</button>
+            <button class="openButton" onclick="openPanel()"><i class="material-icons menu-icon">menu</i></button>
         </div>
         <div id="mysidepanel" class="sidepanel">
-            <a href="javascript:void(0)" class="closeButton" onclick="closePanel()">close</a>
+            <a href="javascript:void(0)" class="closeButton" onclick="closePanel()"><i class="material-icons">close</i></a>
             <a href="#">menu</a>
             <a href="#">rewards</a>
             <a href="#">gift cards</a>
             <a href="#">find a store</a>
-            <button id="signin-button">sign in</button>
-            <button id="joinnow-button">join now</button>
+            <div class="sidepanel-buttons">
+                <button id="signin-button">sign in</button>
+                <button id="joinnow-button">join now</button>
+            </div>
         </div>
         <div id="content">
             <div class="slide slide-1">
