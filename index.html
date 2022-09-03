@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Starbucks homepage</title>
 </head>
 <body>
     <div id="container">
-        <div id="navbar">
-            <ul id="navbar-left">
-                <li><a href="#"><img id="logo" src="images/starbucks-logo.svg.png" alt=""></a></li>
-                <li><a href="#">menu</a></li>
-                <li><a href="#">rewards</a></li>
-                <li><a href="#">gift cards</a></li>
-            </ul>
-            <ul id="navbar-right">
-                <li><a href="#">find a store</a></li>
-                <li><button id="signin-button">sign in</button></li>
-                <li><button id="joinnow-button">join now</button></li>
-            </ul>
+        <div id="header">
+            <img id="logo" src="images/starbucks-logo.svg.png" alt="">
+            <button class="openButton" onclick="openPanel()">open</button>
+        </div>
+        <div id="mysidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closeButton" onclick="closePanel()">close</a>
+            <a href="#">menu</a>
+            <a href="#">rewards</a>
+            <a href="#">gift cards</a>
+            <a href="#">find a store</a>
+            <button id="signin-button">sign in</button>
+            <button id="joinnow-button">join now</button>
         </div>
         <div id="content">
             <div class="slide slide-1">
