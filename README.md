@@ -11,3 +11,4 @@ ProjectLog[4] - Made the content of the website responsive for mobile version, y
 ProjectLog[5] - Working on the hamburger menu of the website. <br/>
 ProjectLog[6] - Successfully implemented the hamburger navigation menu on the website. <br/>
 ProjectLog[7] - Fixed the bug in the UI. The sidepanel/hamburger menu would open up automatically on devices with screen browser size less than 510px. <br/>
+ProjectLog[8] - Finally completed the project, successfully implemented the accordion type menu pop downs, added the smooth slide effect to them, and everything works perfectly. <br/>
