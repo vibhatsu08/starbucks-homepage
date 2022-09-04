@@ -4,11 +4,9 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
 }
-
 :root {
     --navbarSignInButtonHover: #ffdbd2;
     --navbarShadowBgColor: rgb(216, 216, 216);
@@ -21,7 +19,6 @@ body {
     --sidepanelLinksColor: rgb(46, 46, 46);
     --sidepanelLinksHoverColor: rgb(124, 124, 124);
 }
-
 #header {
     display: flex;
     align-items: center;
@@ -126,7 +123,6 @@ a {
     background-color: var(--joinNowButtonHover);
     border: 1px solid var(--joinNowButtonHover);
 }
-
 .slide {
     display: flex;
     justify-content: space-between;
@@ -173,7 +169,6 @@ a {
 .slide-2, .slide-4 {
     flex-direction: row-reverse;
 }
-
 .slide-2, .slide-3, .slide-4, .slide-5 {
     background-color: var(--otherSlidesBgColor);
 }
@@ -200,40 +195,48 @@ a {
     cursor: pointer;
     transition: 0.1s all ease-in-out;
 }
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    max-width: 90vw;
-    margin: auto;
-    padding: 30px;
-    margin-bottom: 30px;
-}
-.footer-content > ul {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 15vw;
-}
-.footer-content > ul > li > a {
-    text-decoration: none;
+.accordion {
+    background-color: rgb(231, 231, 231);
+    border: none;
+    outline: none;
+    width: 100vw;
+    font-size: 1.2rem;
     text-transform: capitalize;
-}
-.footer-list-header > a {
-    color: black;
-    font-size: 1.3rem;
     font-weight: 500;
+    cursor: pointer;
+    padding: 10px 20px;
     text-align: left;
 }
-.footer-list-items > a{
-    color: grey;
+.accordion:after {
+    content: '\02795';
+    font-size: 1.1rem;
+    float: right;
 }
-
-
+.panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.2s all ease-in-out;
+}
+.active, .accordion:hover {
+    background-color: rgb(213, 213, 213);
+}
+.active:after {
+    content: '\2796';
+}
+.panel-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 10px 20px;
+    gap: 20px;
+    background-color: rgb(246, 246, 246);
+}
+.panel-items > a {
+    text-decoration: none;
+    color: #39393f;
+    text-transform: capitalize;
+}
 @media only screen and (max-width: 1300px) {
     .slide-2-content > h3, .slide-3-content > h3, .slide-4-content > h3, .slide-5-content > h3 {
         font-size: 2.5rem;
@@ -257,19 +260,18 @@ a {
         width: 100vw;
     }
     .slide {
-        display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
         width: 100%;
     }
     .slide-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         width: 80%;
         margin: auto;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .panel-items {
+        flex-direction: column;
     }
 }
 
