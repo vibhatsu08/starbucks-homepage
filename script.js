@@ -4,7 +4,21 @@ openPanel = () => {
 closePanel = () => {
     document.getElementById('mysidepanel').style.width = '0px';
 }
-// Using this function, because i am facing a bug, where the sidepanel automatically opens on device browsers with width less than 510px.
-window.onload = () => {
-    document.getElementById('mysidepanel').style.width = '0px';
+
+let accordion = document.getElementsByClassName("accordion");
+
+for (let i=0; i<accordion.length; i++) {
+    accordion[i].addEventListener (
+        "click", function () {
+            this.classList.toggle("active");
+
+            let panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            }
+            else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+    );
 }
