@@ -18,6 +18,11 @@ body {
     --otherSlidesButtonHover: rgb(2, 130, 85);
     --sidepanelLinksColor: rgb(46, 46, 46);
     --sidepanelLinksHoverColor: rgb(124, 124, 124);
+    --accordionColor: #39393f;
+    --accordionBgColor: rgb(231, 231, 231);
+    --accordionBgColorHover: rgb(213, 213, 213);
+    --accordionLinksBgColor: rgb(246, 246, 246);
+    --accordionLinksColor: #4e4e51;
 }
 #header {
     display: flex;
@@ -91,6 +96,7 @@ a {
     font-size: 20px;
     cursor: pointer;
     border: none;
+    outline: none;
     top: 2vh;
     right: 2vw;
     background-color: inherit;
@@ -100,6 +106,7 @@ a {
 #signin-button, #joinnow-button {
     border-style: none;
     border: 1px solid black;
+    outline: none;
     border-radius: 10000px;
     padding: 8px 12px;
     font-size: 1.2rem;
@@ -111,6 +118,7 @@ a {
 #signin-button {
     color: black;
     background-color: inherit;
+    outline: none;
 }
 #signin-button:hover {
     background-color: var(--navbarSignInButtonHover);
@@ -118,6 +126,7 @@ a {
 #joinnow-button {
     background-color: black;
     color: white;
+    outline: none;
 }
 #joinnow-button:hover {
     background-color: var(--joinNowButtonHover);
@@ -196,7 +205,8 @@ a {
     transition: 0.1s all ease-in-out;
 }
 .accordion {
-    background-color: rgb(231, 231, 231);
+    background-color: var(--accordionBgColor);
+    color: var(--accordionColor);
     border: none;
     outline: none;
     width: 100vw;
@@ -218,7 +228,7 @@ a {
     transition: 0.2s all ease-in-out;
 }
 .active, .accordion:hover {
-    background-color: rgb(213, 213, 213);
+    background-color: var(--accordionBgColorHover);
 }
 .active:after {
     content: '\2796';
@@ -230,11 +240,11 @@ a {
     flex-direction: row;
     padding: 10px 20px;
     gap: 20px;
-    background-color: rgb(246, 246, 246);
+    background-color: var(--accordionLinksBgColor);
 }
 .panel-items > a {
     text-decoration: none;
-    color: #39393f;
+    color: var(--accordionLinksColor);
     text-transform: capitalize;
 }
 @media only screen and (max-width: 1300px) {
